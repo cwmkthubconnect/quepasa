@@ -10,7 +10,12 @@ This document describes all environment variables used by the QuePasa applicatio
   - No default value - must be explicitly configured.
 
 - **`SIPPROXY_PORT`** - SIP server port (default: `5060`)
+- **`SIPPROXY_PROTOCOL`** - SIP transport protocol (default: `UDP`)
 - **`SIPPROXY_LOCALPORT`** - Local SIP listening port (default: `5060`)
+- **`SIPPROXY_AUTHUSERNAME`** - SIP digest auth username/auth ID used when SIP server replies with `401/407`
+- **`SIPPROXY_AUTHPASSWORD`** - SIP digest auth password used when SIP server replies with `401/407`
+- **`SIPPROXY_FROMUSER`** - Optional override for SIP `From`/`Contact` user (useful for trunk/bridge identity)
+- **`SIPPROXY_TOUSER`** - Optional override for SIP destination user (extension, queue, ring group, route point)
 
 ### Network & NAT Settings
 - **`SIPPROXY_PUBLICIP`** - Override public IP (leave empty for auto-discovery)
@@ -26,7 +31,6 @@ This document describes all environment variables used by the QuePasa applicatio
 - **`SIPPROXY_TIMEOUT`** - SIP transaction timeout in seconds (default: `30`)
 - **`SIPPROXY_RETRIES`** - SIP INVITE retry attempts (default: `3`)
 - **`SIPPROXY_LOGLEVEL`** - SIP proxy specific log level (default: `info`)
-- **`SIPPROXY_PROTOCOL`** - SIP server protocol (default: `UDP`)
 - **`SIPPROXY_SDPSESSIONNAME`** - SDP session name
 
 ## 🔗 API/Web Server Configuration
